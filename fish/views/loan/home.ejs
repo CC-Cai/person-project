@@ -1,0 +1,80 @@
+
+    <header id="header">
+
+    </header>
+    <div class="home-content">
+        <div class="banner">
+            <img src="/images/home/banner.png" alt="">
+        </div>
+        <%if(productCategory&&productCategory.length>0){%>
+        <div class="products">
+            <h2>贷款产品大全</h2>
+            <ul class="clearfix">
+            <%productCategory.forEach(function(item){%>
+             <li>
+                <a href="/loan/list?loantype=<%=item.productypeno%>">
+                    <div class="product-category">
+                        <h3 class="category1">
+                            <%=item.productypename%>
+                        </h3>
+                        <div class="category-descript">
+                             <%=item.productdes%>
+                        </div>
+                        <div class="category-icon">
+                            <img src="<%=item.logourl%>" alt="<%=item.productypename%>">
+                        </div>
+                    </div>
+                </a>
+                </li>
+            <%})%>
+            </ul>
+        </div>
+        <%}%>
+        <div class="calculate clearfix">
+            <div class="logo-content">
+                <img src="/images/home/logo.png" alt="logo">
+            </div>
+            <div class="calculate-helper">
+                <p>鱼帮帮：</p>
+                <p>小主，让我来帮您精准选择 符合您的产品吧~</p>
+            </div>
+            <div class="rigth-icon-content">
+                <i class="rigth-more-icon"></i>
+            </div>
+        </div>
+        <%if(hotProducts&&hotProducts.length>0){%>
+        <div class="hot-recommend">
+            <div class="hot-title clearfix">
+                <span>热门推荐</span>
+                <span class="hot-change clearfix">换一批</span>
+            </div>
+            <ul class="recommend-products">
+            <%hotProducts.forEach(function(item){%>
+              <li>
+               <a href="/loan/detail/<%=item.loanserialno%>">
+                    <div class="clearfix">
+                        <div class="product-logo fl">
+                            <img src="<%=item.logourl%>" alt="<%=item.productname%>">
+                        </div>
+                        <div class="product-info fl">
+                            <h4><%=item.productname%></h4>
+                            <p>可贷额度：<%=item.ammout%></p>
+                            <p>参考日利率：<%=item.dayrate%></p>
+                        </div>
+                        <div class="rigth-icon-content fl">
+                            <i class="rigth-more-icon"></i>
+                        </div>
+                    </div>
+                    <div class="product-tags">
+                        <%=item.productdes%>
+                    </div>
+                    </a>
+                </li>
+             <%})%>
+            </ul>
+        </div>
+        <%}%>
+    </div>
+    <footer id="footer">
+
+    </footer>

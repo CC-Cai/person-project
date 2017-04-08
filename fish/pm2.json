@@ -1,0 +1,18 @@
+{
+    "apps": [{
+        "name": "zhudai-server",
+        "cwd": "/CC-Cai/from-git/Study/person-project/zhudai/soucre-code",
+        "script": "bin/www",
+        "exec_mode": "fork",
+        "instances": "0",
+        "args": ["--enable-logs", "-n", "15", "--color"],
+        "log_date_format": "YYYY-MM-DD HH:mm Z",
+        "watch": false,
+        "merge_logs": true,
+        "autorestart": true,
+        "env": {
+            "NODE_ENV": "test",
+            "PORT": "8081"
+        }
+    }]
+}

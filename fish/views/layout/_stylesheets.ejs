@@ -1,0 +1,6 @@
+<link rel="stylesheet" href="/stylesheets/base.css" />
+<% if(css&&css.length>0){%>
+    <%css.forEach(function(item){%>
+        	<link rel="stylesheet" href="/stylesheets/<%=item%>" />
+    <%})%>
+<%}%>
