@@ -1,0 +1,62 @@
+
+    <header id="header">
+        <span class="f38">信用卡</span>
+    </header>
+    <div class="home-content">
+        <div class="banner">
+            <img src="../../images/home/banner.png" alt="">
+        </div>
+        <div class="hot-bank-content">
+            <div class="clearfix">
+                <h3>
+                    热门银行
+                </h3>
+                <span class="more-bank ">
+               &nbsp;
+            </span>
+            </div>
+            <%if(banksList&&banksList.length>0){%>
+            <ul class="hot-bank-list clearfix">
+                <%banksList.forEach(function(item){%>
+                <li class="hot-bank-item">
+                    <a href="">
+                        <img src="<%=item.logourl%>" alt="<%=item.productname%>">
+                        <div class="bank-profit">
+                            <span><%=item.productypename%></span>
+                        </div>
+                    </a>
+                </li>
+                <%})%>
+            </ul>
+            <%}%>
+        </div>
+        <div class="hot-bank-content pt20">
+            <div class="clearfix">
+                <h3>
+                    本周热门卡
+                </h3>
+                <span>
+                    &nbsp;
+                </span>
+            </div>
+            <div class="hot-card">
+                <ul class="card-list clearfix">
+                    <li class="card-item">
+                        <img src="../../images/credit-card/card1.png" alt="">
+                        <strong>浦发青春信用卡</strong>
+                        <p>全年免费双人观影</p>
+                    </li>
+                    <li class="card-item">
+                        <img src="../../images/credit-card/card2.png" alt="">
+                        <strong>浦发青春信用卡</strong>
+                        <p>全年免费双人观影</p>
+                    </li>
+                    <li class="card-item">
+                        <img src="../../images/credit-card/card3.png" alt="">
+                        <strong>浦发青春信用卡</strong>
+                        <p>全年免费双人观影</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>

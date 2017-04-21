@@ -29,7 +29,7 @@
     float: left;
 }
 
-.hot-bank-content span {
+.hot-bank-content .more-bank {
     display: block;
     width: 69%;
     text-align: right;
@@ -68,9 +68,17 @@
 .hot-bank-list .hot-bank-item .bank-profit {
     float: left;
     height: 1.38rem;
-    line-height: 1.38rem;
-    color: #ff8900;
+    /* line-height: 1.38rem; */
     font-weight: 600;
+    max-width: 1.2rem;
+    display: table
+}
+
+.hot-bank-list .hot-bank-item .bank-profit span {
+    display: table-cell;
+    color: #ff8900;
+    font-size: 0.12rem;
+    vertical-align: middle;
 }
 
 .card-list {

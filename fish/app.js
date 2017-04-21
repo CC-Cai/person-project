@@ -10,7 +10,7 @@ var logger = require('./lib/log');
 
 var pageRouters = {
     loan: require('./routes/pages/loan'),
-    // card: require('./routes/pages/card'),
+    card: require('./routes/pages/card'),
 };
 
 var apiRouters = {
@@ -36,6 +36,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/loan', pageRouters.loan);
+app.use('/card', pageRouters.card);
 
 app.use('/api/loan', apiRouters.loan);
 
