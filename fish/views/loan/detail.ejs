@@ -1,0 +1,75 @@
+
+    <header id="header">
+        <span class="f38">贷款详情</span>
+    </header>
+    <div class="product-detail">
+        <div class="login-tips fn-hide">
+            登录后获得推荐产品 <span>立即登陆</span>
+        </div>
+        <div class="product-info">
+            <a href="<%=data.producturl%>">
+                <div class="product-desc clearfix">
+                    <div class="clearfix">
+                        <div class="product-logo"><img src="<%=data.logourl%>"></div>
+                        <div class="product-person">
+                            <h2 class="product-name"><b><%=data.productname%></b></h2>
+                            <div class="pt15">适用人群：<%=data.fitpeople%></div>
+                            <div class="pt15">申请人数：<b><%=data.applications%>人</b></div>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <ul class="product-datas">
+                            <li class="data-item br1 bb1"><strong>成功率</strong><br/><span><%=data.successrate%></span></li>
+                            <li class="data-item br1 bb1"><strong>日利率</strong><br/><span><%=data.dayrate%></span></li>
+                            <li class="data-item br1 bb1"><strong>平均用时</strong><br/><span><%=data.averagetime%></span></li>
+                            <li class="data-item bb1"><strong> 平均额度</strong><br/><span><%=data.averageamount%></span></li>
+                            <li class="data-item br1"><strong> 贷款期限</strong><br/><span><%=data.loanperiod%></span></li>
+                            <li class="data-item br1"><strong> 还款方式</strong><br/><span><%=data.repaymentway%></span></li>
+                            <li class="data-item br1"><strong> 额度范围</strong><br/><span><%=data.ammout%></span></li>
+                            <li class="data-item"><strong>最快用时</strong><br/><span><%=data.fastesttime%></span></li>
+                        </ul>
+                    </div>
+                    <div class="product-summary">
+                        <strong><%=data.productdes%></strong>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="product-condition  product-paragraph">
+            <div class="paragraph-title">
+                <i class="icon"></i>
+                <h4>贷款条件</h4>
+            </div>
+            <ul>
+                <li><%=data.loansconditions%></li>
+            </ul>
+        </div>
+        <% if(data.applyingdata&&data.applyingdata.length>0){%>
+        <div class="product-apply  product-paragraph">
+            <div class="paragraph-title">
+                <i class="icon"></i>
+                <h4>申请资料</h4>
+            </div>
+            <ul>
+            <%data.applyingdata.forEach(function(item,index){%>
+                <li><%=((index+1) +'、'+item )%> </li>
+            <%})%>
+            </ul>
+        </div>
+        <%}%>
+        <div class="product-other  product-paragraph">
+            <div class="paragraph-title">
+                <i class="icon"></i>
+                <h4>其他</h4>
+            </div>
+            <ul>
+                <li><%=data.other%></li>
+            </ul>
+        </div>
+        <div class="fixed-btn">
+            <a href="<%=data.producturl%>"> <strong>申请贷款</strong></a>
+        </div>
+    </div>
+    <footer id="footer">
+
+    </footer>

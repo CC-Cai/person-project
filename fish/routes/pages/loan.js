@@ -42,11 +42,11 @@ router.get(/^\/detail\/(\d+)$/i, function(req, res, next) {
     var id = req.params[0];
     loanService.fetchList({ loanserialno: id })
         .then(function(result) {
-            res.render('loan/list', {
-                data: result,
+            res.render('loan/detail', {
+                data: result[0],
                 title: '小鱼儿贷款平台-贷款详情页',
                 layout: 'layout/pages/layout',
-                css: ['/loan/list.css'],
+                css: ['/loan/detail.css'],
             });
         })
         .catch(function(error) {
