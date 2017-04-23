@@ -10,7 +10,7 @@ try {
                 dir: './logs'
             }
         },
-        serviceHost: 'hbpub0561.6655.la',
+        serviceHost: '112.74.184.28',
     };
 } catch (error) {
     console.warn('There is no matched config file for current environment');
