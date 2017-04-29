@@ -42,8 +42,15 @@ router.get(/^\/detail\/(\d+)$/i, function(req, res, next) {
     var id = req.params[0];
     loanService.fetchList({ loanserialno: id })
         .then(function(result) {
+            var datas = result || [],
+                data = {};
+            datas.forEach(function(item) {
+                if (item.loanserialno === id) {
+                    data = item;
+                }
+            });
             res.render('loan/detail', {
-                data: result[0],
+                data: data,
                 title: '小鱼儿贷款平台-贷款详情页',
                 layout: 'layout/pages/layout',
                 css: ['/loan/detail.css'],

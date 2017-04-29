@@ -39,6 +39,6 @@ var _requestFcotory = function(url, methods) {
 
 
 module.exports = {
-    fetchList: _requestFcotory('/zhudai_api/service/cardproducts'),
-    fetchProductCategory: _requestFcotory('/zhudai_api/service/producttypes')
+    fetchList: _requestFcotory('/fishapi/cardproducts'),
+    fetchProductCategory: _requestFcotory('/fishapi/producttypes')
 };

@@ -124,19 +124,23 @@
     text-align: left;
 }
 
+.product-item .tags {
+    height: 0.7rem;
+    overflow: hidden;
+}
+
 .product-item .product-ration span {
     font-size: 0.45rem;
     color: #ff9000;
 }
 
 .product-item .tags .tag-item {
-    width: 20%;
-    float: left;
+    padding-bottom: 0.2rem;
+    display: inline-block;
 }
 
 .product-item .tags .tag-item span {
-    width: 95%;
-    margin: 0rem 0.05rem 0rem 0.05rem;
+    padding: 0.1rem 0.25rem;
     display: inline-block;
     border: solid 0.05rem #dbdbdb;
     border-radius: 0.5rem;
