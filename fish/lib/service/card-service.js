@@ -40,5 +40,6 @@ var _requestFcotory = function(url, methods) {
 
 module.exports = {
     fetchList: _requestFcotory('/fishapi/cardproducts'),
-    fetchProductCategory: _requestFcotory('/fishapi/producttypes')
+    fetchProductCategory: _requestFcotory('/fishapi/producttypes'),
+    fetchBanners: _requestFcotory('/fishapi/productactivities')
 };

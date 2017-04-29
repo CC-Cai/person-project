@@ -7,7 +7,8 @@ var cardService = require('../../lib/service/card-service');
 router.get('/', function(req, res, next) {
     Promise.all([
             cardService.fetchProductCategory({ producttype: 2 }),
-            cardService.fetchList({ hot: 1 })
+            cardService.fetchList({ hot: 1 }),
+            cardService.fetchBanners({ producttype: 2 })
         ])
         .then(function(result) {
             res.render('card/home', {
@@ -15,7 +16,9 @@ router.get('/', function(req, res, next) {
                 layout: 'layout/pages/layout',
                 css: ['/credit-card/home.css'],
                 banksList: result[0] || [],
-                hotProducts: result[1] || []
+                hotProducts: result[1] || [],
+                banners: result[2] || [],
+                jsName: 'loan-home',
             });
         });
 

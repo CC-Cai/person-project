@@ -1,10 +1,26 @@
 
+<link rel="stylesheet" href="/static/javascripts/libs/swiper/3.1.0/swiper.min.css" />
+
     <header id="header">
         <span class="f38">信用卡</span>
     </header>
     <div class="home-content">
         <div class="banner">
-            <img src="/static/images/home/banner.png" alt="">
+    <% if(banners&&banners.length>0){ %>
+    <div class="cchannel-swiper swiper-container">
+        <ul class="clearfix swiper-wrapper">
+            <% banners.forEach( function (bannerItem){   %>
+                <li class="swiper-slide">
+                    <a href="<%=(bannerItem.activitiurl||'javascript:;')%>" >
+                        <img src="<%=(bannerItem.productpic||'http://www.1handfish.com/static/images/home/banner.png')%>" width="100%" />
+                    </a>
+                </li>
+            <% })%>
+        </ul>
+        <div class="swiper-pagination"></div>
+
+    </div>
+    <%}%>
         </div>
         <div class="hot-bank-content">
             <div class="clearfix">

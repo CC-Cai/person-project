@@ -1,2 +1,13 @@
 
 <script src="/static/javascripts/libs/zepto/1.1.6/zepto.min.js" ></script>
+<script src="/static/javascripts/libs/require/2.1.11/require.min.js"></script>
+<script src="/static/javascripts/src/require-config.js"></script>
+<script>
+	<% if (locals.jsName) { %>
+    requirejs(['<%=locals.jsName%>'], function ( index) {
+        if (index && index.init) {
+        	index.init();
+        }
+    });
+    <% } %>
+</script>

@@ -4,8 +4,23 @@
     </header>
     <div class="home-content">
         <div class="banner">
-            <img src="/static/images/home/banner.png" alt="">
+                <% if(banners&&banners.length>0){ %>
+    <div class="cchannel-swiper swiper-container">
+        <ul class="clearfix swiper-wrapper">
+            <% banners.forEach( function (bannerItem){   %>
+                <li class="swiper-slide">
+                    <a href="<%=(bannerItem.activitiurl||'javascript:;')%>" >
+                        <img src="<%=(bannerItem.productpic||'http://www.1handfish.com/static/images/home/banner.png')%>" width="100%" />
+                    </a>
+                </li>
+            <% })%>
+        </ul>
+        <div class="swiper-pagination"></div>
+
+    </div>
+    <%}%>
         </div>
+        <link rel="stylesheet" href="/static/javascripts/libs/swiper/3.1.0/swiper.min.css" />
         <%if(productCategory&&productCategory.length>0){%>
         <div class="products">
             <h2>贷款产品大全</h2>
@@ -31,6 +46,7 @@
         </div>
         <%}%>
         <div class="calculate clearfix">
+            <a href="http://www.1handfish.com/ITlittlefish/precision_push.html">
             <div class="logo-content">
                 <img src="/static/images/home/logo.png" alt="logo">
             </div>
@@ -41,6 +57,7 @@
             <div class="rigth-icon-content">
                 <i class="rigth-more-icon"></i>
             </div>
+            </a>
         </div>
         <%if(hotProducts&&hotProducts.length>0){%>
         <div class="hot-recommend">
